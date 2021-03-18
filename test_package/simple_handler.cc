@@ -108,12 +108,15 @@ void SimpleHandler::OnLoadError(CefRefPtr<CefBrowser> browser,
     return;
 
   // Display a load error message.
+  // LoadString was removed: https://github.com/chromiumembedded/cef/commit/737ff1849818ec793e94ca6f1d23030839f95154
+  /*
   std::stringstream ss;
   ss << "<html><body bgcolor=\"white\">"
         "<h2>Failed to load URL " << std::string(failedUrl) <<
         " with error " << std::string(errorText) << " (" << errorCode <<
         ").</h2></body></html>";
   frame->LoadString(ss.str(), failedUrl);
+  */
 }
 
 void SimpleHandler::CloseAllBrowsers(bool force_close) {
