@@ -4,7 +4,7 @@ import os
 
 class CEFConan(ConanFile):
     name = "cef"
-    version = "4389"
+    version = "89.0.7+gb5952bd+chromium-89.0.4389.72"
     description = "The Chromium Embedded Framework (CEF) is an open source framework for embedding a web browser engine which is based on the Chromium core"
     topics = ("conan", "cef", "chromium", "chromium-embedded-framework")
     url = "https://github.com/bincrafters/conan-cef"
@@ -45,10 +45,10 @@ class CEFConan(ConanFile):
             # self.options.remove("use_sandbox") # it requires to be built with that exact version for sandbox support
 
     def source(self):
-        self.output.info("Downloading CEF prebuilts from opensource.spotify.com/cefbuilds/index.html")
+        self.output.info("Downloading CEF prebuilts from https://cef-builds.spotifycdn.com/index.html")
 
         cef_download_filename ="{}.tar.bz2".format(self.get_cef_distribution_name())
-        archive_url = "http://opensource.spotify.com/cefbuilds/{}".format(cef_download_filename)
+        archive_url = "https://cef-builds.spotifycdn.com/cef_binary_{0}".format(cef_download_filename)
         tools.get(archive_url)
         os.rename(self.get_cef_distribution_name(), self._source_subfolder)
 
