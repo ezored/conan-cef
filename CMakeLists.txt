@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.19.0)
+cmake_minimum_required(VERSION 3.7.0)
 project(cmake_wrapper)
 
 include(conanbuildinfo.cmake)
