@@ -68,5 +68,6 @@ jobs:
         env:
           CONAN_LOGIN_USERNAME: ${{ secrets.CONAN_LOGIN_USERNAME }}
           CONAN_PASSWORD: ${{ secrets.CONAN_PASSWORD }}
+          CONAN_USERNAME: ezored
         run: |
           bincrafters-package-tools --auto
