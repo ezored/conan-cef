@@ -16,6 +16,13 @@ on: [push, pull_request]
 
 name: conan
 
+env:
+  CONAN_REFERENCE: "cef/89.0.7+gb5952bd+chromium-89.0.4389.72"
+  CONAN_USERNAME: "ezored"
+  CONAN_CHANNEL: "stable"
+  CONAN_UPLOAD: "https://ezored.jfrog.io/artifactory/api/conan/ezored"
+  CONAN_STABLE_BRANCH_PATTERN: "stable/*"
+  CONAN_UPLOAD_ONLY_WHEN_STABLE: 1
 jobs:
   generate-matrix:
     name: Generate Job Matrix

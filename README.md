@@ -1,4 +1,4 @@
-[![conan](https://github.com/ezored/conan-cef/actions/workflows/conan.yml/badge.svg?branch=master)](https://github.com/ezored/conan-cef/actions/workflows/conan.yml)
+[![conan](https://github.com/ezored/conan-cef/actions/workflows/conan.yml/badge.svg)](https://github.com/ezored/conan-cef/actions/workflows/conan.yml)
 
 ## Conan package recipe for [*cef*](https://bitbucket.org/chromiumembedded/cef)
 
@@ -15,7 +15,7 @@ If you wish to report an issue, please do so here:
 ### Basic setup
 
 ```
-conan install conan-cef/89.0.7+gb5952bd+chromium-89.0.4389.72@ezored/testing
+conan install cef/89.0.7+gb5952bd+chromium-89.0.4389.72@ezored/stable
 ```
 
 ### Project setup
@@ -24,7 +24,7 @@ If you handle multiple dependencies in your project is better to add a *conanfil
 
 ```
 [requires]
-conan-cef/89.0.7+gb5952bd+chromium-89.0.4389.72@ezored/testing
+cef/89.0.7+gb5952bd+chromium-89.0.4389.72@ezored/stable
 
 [generators]
 cmake
